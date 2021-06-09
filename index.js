@@ -202,9 +202,20 @@ Use the getAverageWordLength function below to do the following:
     For example: getAverageWordLength(originalFlavors) should return a number between 0 and 3.     
 */
 
-function getAverageWordLength(/*code here*/){
-    /*code here*/
-}
+function getAverageWordLength(array){
+    const wordCount=[];
+    var i;
+    for(i=0;i<array.length;i++){
+        var str = array[i];
+        wordCount.push(str.length);
+    }
+    var total = 0;
+    for (i=0;i<wordCount.length;i++){
+        total+=wordCount[i];
+    } var avg = total/wordCount.length;
+    return(avg);
+    
+} console.log('stretch 1',getAverageWordLength(originalFlavors));
 
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪
